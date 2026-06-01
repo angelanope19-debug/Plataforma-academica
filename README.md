@@ -4,7 +4,10 @@
 Plataforma académica básica desarrollada como parte del taller de Git y GitHub. El objetivo es demostrar el manejo correcto del flujo de trabajo con control de versiones.
 
 ## Integrantes
-- [Tu nombre aquí]
+- Angela Gisela Nope Quincos (93205)
+- Brayan Medina Alvarez (93385)
+- Julian Andres Suarez Noguera (92394)
+- Luis Enriquez Burbano (93424)
 
 ## Contenido
 Esta plataforma contiene los archivos iniciales para una estructura web básica:
