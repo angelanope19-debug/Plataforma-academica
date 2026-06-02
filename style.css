@@ -5,11 +5,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
 }
 
 /* Header y Navegación */
@@ -17,7 +22,10 @@ header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar {
@@ -26,115 +34,245 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.5rem 2rem;
+    padding: 1.8rem 2rem;
 }
 
 .navbar h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 0.5rem;
 }
 
 .menu a:hover {
-    opacity: 0.8;
+    opacity: 1;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
 }
 
 /* Main */
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 3rem 2rem;
 }
 
 /* Sección Hero */
 .hero {
-    background: white;
-    padding: 3rem 2rem;
-    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    backdrop-filter: blur(10px);
+    padding: 4rem 2rem;
+    border-radius: 15px;
     text-align: center;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
 }
 
 .hero-content h2 {
     color: #667eea;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -1px;
 }
 
 .hero-content p {
-    color: #666;
-    font-size: 1.1rem;
+    color: #555;
+    font-size: 1.25rem;
+    font-weight: 400;
 }
 
 /* Secciones */
 .section {
     background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
 }
 
 .section h3 {
     color: #667eea;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #667eea;
-    padding-bottom: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 1rem;
+    font-weight: 700;
 }
 
 /* Contenedor de tarjetas */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
 }
 
 .card {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 2rem;
+    border-radius: 12px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: left 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+}
+
+.card:hover::before {
+    left: 100%;
 }
 
 .card h4 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
 }
 
 .card p {
     font-size: 0.95rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+    line-height: 1.6;
+}
+
+/* Contenedor de Integrantes */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.team-member {
+    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+    border-left: 5px solid #667eea;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: #667eea;
+    opacity: 0.1;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+    border-left-color: #764ba2;
+}
+
+.team-member:hover::after {
+    right: -30px;
+}
+
+.team-member h4 {
+    color: #667eea;
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.team-member .id {
+    color: #764ba2;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.team-member p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
     color: white;
     text-align: center;
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     margin-top: 3rem;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
 }
 
 /* Responsive */
