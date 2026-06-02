@@ -266,6 +266,38 @@ main {
     z-index: 1;
 }
 
+/* Estilos especiales para Luis Enriquez Burbano */
+.team-member.luis-special {
+    background: linear-gradient(135deg, #ff000015 0%, #cc000015 100%);
+    border-left: 5px solid #cc0000;
+}
+
+.team-member.luis-special:hover {
+    border-left-color: #ff0000;
+}
+
+.team-member.luis-special h4 {
+    font-family: 'Blackletter', 'Cardo', 'Old English Text', 'Palatino Linotype', 'Book Antiqua', serif;
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.team-member.luis-special .id {
+    color: #cc0000;
+    font-weight: 700;
+}
+
+.team-member.luis-special p:not(.id) {
+    color: #cc0000;
+    font-weight: 600;
+    font-style: italic;
+}
+
 /* Footer */
 footer {
     background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
