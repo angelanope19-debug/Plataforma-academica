@@ -108,6 +108,31 @@ main {
     color: #555;
     font-size: 1.25rem;
     font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    color: #667eea;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    color: #666;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 /* Secciones */
@@ -235,18 +260,12 @@ main {
 }
 
 .team-member h4 {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-    font-weight: 700;
+    color: #667eea;
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
     position: relative;
     z-index: 1;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .team-member .id {
@@ -266,36 +285,108 @@ main {
     z-index: 1;
 }
 
-/* Estilos especiales para Luis Enriquez Burbano */
-.team-member.luis-special {
-    background: linear-gradient(135deg, #ff000015 0%, #cc000015 100%);
-    border-left: 5px solid #cc0000;
+/* Sección Características */
+.features-section {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
 }
 
-.team-member.luis-special:hover {
-    border-left-color: #ff0000;
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
-.team-member.luis-special h4 {
-    font-family: 'Blackletter', 'Cardo', 'Old English Text', 'Palatino Linotype', 'Book Antiqua', serif;
-    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+.feature-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
 }
 
-.team-member.luis-special .id {
-    color: #cc0000;
-    font-weight: 700;
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.15);
+    border-color: #667eea;
 }
 
-.team-member.luis-special p:not(.id) {
-    color: #cc0000;
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.feature-card h4 {
+    color: #667eea;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
     font-weight: 600;
-    font-style: italic;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Sección Contacto */
+.contact-section {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.info-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+    border-left-color: #764ba2;
+}
+
+.info-card h4 {
+    color: #667eea;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.info-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.info-card a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.info-card a:hover {
+    color: #764ba2;
+    text-decoration: underline;
 }
 
 /* Footer */
