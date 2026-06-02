@@ -11,9 +11,9 @@ Plataforma académica básica desarrollada como parte del taller de Git y GitHub
 
 ## Contenido
 Esta plataforma contiene los archivos iniciales para una estructura web básica:
-- `index.html` - Estructura HTML
-- `style.css` - Estilos CSS
-- `script.js` - Funcionalidades JavaScript (opcional)
+- `index.html` - Estructura HTML semántica con secciones principales
+- `style.css` - Estilos CSS con diseño responsivo
+- `script.js` - Funcionalidades JavaScript para interactividad
 
 ## Instrucciones de uso
 1. Clonar el repositorio
