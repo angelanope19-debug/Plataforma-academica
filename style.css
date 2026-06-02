@@ -235,12 +235,18 @@ main {
 }
 
 .team-member h4 {
-    color: #667eea;
-    font-size: 1.2rem;
-    margin-bottom: 0.4rem;
-    font-weight: 600;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
     position: relative;
     z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .team-member .id {
